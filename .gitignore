@@ -4,6 +4,9 @@
 .env.local
 .env.production
 .env.staging
+.env
+python/.env
+dotnet/.env
 
 # User-specific files
 *.user
@@ -40,3 +43,5 @@ local.settings.json
 appsettings.*.json
 !appsettings.json
 python/.venv/Lib/site-packages/_cffi_backend.cp312-win_amd64.pyd
+python/.env
+dotnet/.env
