@@ -1,0 +1,42 @@
+# Git ignore file for environment variables and sensitive data
+
+# Environment variable files
+.env.local
+.env.production
+.env.staging
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Red Team scan folders
+*scan*
+python\.scan_*
+python/.scan_*/
+python/**/.scan_*/
+python/.venv
+
+# Visual Studio files
+.vs/
+*.vscode/
+
+# Azure Functions localsettings file
+local.settings.json
+
+# User secrets
+appsettings.*.json
+!appsettings.json
+python/.venv/Lib/site-packages/_cffi_backend.cp312-win_amd64.pyd
