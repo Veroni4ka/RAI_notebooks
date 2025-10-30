@@ -1,0 +1,10 @@
+{"query": "What is the longest hiking trail in the world?", "context": "Hiking trails vary in length and difficulty, with some spanning entire countries or continents.", "ground_truth": "The Great Trail"}
+{"query": "What are the essential items for a day hike?", "context": "Day hiking requires basic preparation to stay safe and comfortable in the outdoors.", "ground_truth": "Water, snacks, map, sunscreen, sturdy shoes"}
+{"query": "Which mountain is the highest in the world?", "context": "Mount Everest is located in the Himalayas and is a popular destination for climbers and hikers.", "ground_truth": "Mount Everest"}
+{"query": "What is Leave No Trace?", "context": "Outdoor ethics are important for preserving natural environments during recreational activities.", "ground_truth": "Principles for minimizing environmental impact"}
+{"query": "What should you do if you get lost while hiking?", "context": "Getting lost can happen even on familiar trails, so preparation is key.", "ground_truth": "Stay calm, use navigation tools, follow water downhill"}
+{"query": "What is the best time of year for hiking in the Rockies?", "context": "Weather conditions affect hiking safety and enjoyment in mountainous regions.", "ground_truth": "June to September"}
+{"query": "What type of footwear is recommended for hiking?", "context": "Proper gear enhances comfort and prevents injuries during long walks.", "ground_truth": "Hiking boots"}
+{"query": "What is altitude sickness?", "context": "High elevation can cause health issues for hikers not acclimated to thin air.", "ground_truth": "Condition from rapid high elevation ascent"}
+{"query": "Which national park has the most visitors?", "context": "National parks offer diverse landscapes and recreational opportunities.", "ground_truth": "Great Smoky Mountains National Park"}
+{"query": "What is the purpose of trekking poles?", "context": "Hiking accessories can improve balance and reduce strain on joints.", "ground_truth": "Provide stability and reduce strain"}
