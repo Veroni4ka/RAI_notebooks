@@ -19,6 +19,10 @@ class ModelEndpoints:
             output = self.call_gpt5_endpoint(query)
         elif self.model_type == "ministral":
             output = self.call_ministral_endpoint(query)
+        elif self.model_type == "grok":
+            output = self.call_grok_endpoint(query)
+        elif self.model_type == "claude":
+            output = self.call_claude_endpoint(query)
         else:
             output = self.call_default_endpoint(query)
 
@@ -96,3 +100,57 @@ class ModelEndpoints:
 
     def call_default_endpoint(self: Self, query: str) -> Response:
         return {"query": query, "response": "Paris"}
+
+    def call_grok_endpoint(self: Self, query: str) -> Response:
+        key = "EboWgl2E6kLJNNHJBuK41NbneHUddO6sMGVD7elpZ4xdrlx305ZcJQQJ99BJACHYHv6XJ3w3AAAAACOGYeJW"
+        endpoint = "https://vk-2255-resource.cognitiveservices.azure.com/"
+        deployment = "grok-4"  # Update this to match your actual deployment name
+        api_version = "2024-05-01-preview"
+
+        client = AzureOpenAI(
+            api_version=api_version,
+            azure_endpoint=endpoint,
+            api_key=key,
+        )
+
+        try:
+            response = client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "user",
+                        "content": query,
+                    },
+                ],
+                model=deployment,
+                max_completion_tokens=800,
+            )
+            return {"query": query, "response": response.choices[0].message.content}
+        except Exception as e:
+            return {"query": query, "response": f"Error calling grok endpoint: {str(e)}"}
+
+    def call_claude_endpoint(self: Self, query: str) -> Response:
+        key = "EboWgl2E6kLJNNHJBuK41NbneHUddO6sMGVD7elpZ4xdrlx305ZcJQQJ99BJACHYHv6XJ3w3AAAAACOGYeJW"
+        endpoint = "https://vk-2255-resource.cognitiveservices.azure.com/"
+        deployment = "claude-sonnet-4-5"  # Update this to match your actual deployment name
+        api_version = "2024-05-01-preview"
+
+        client = AzureOpenAI(
+            api_version=api_version,
+            azure_endpoint=endpoint,
+            api_key=key,
+        )
+
+        try:
+            response = client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "user",
+                        "content": query,
+                    },
+                ],
+                model=deployment,
+                max_completion_tokens=800,
+            )
+            return {"query": query, "response": response.choices[0].message.content}
+        except Exception as e:
+            return {"query": query, "response": f"Error calling claude endpoint: {str(e)}"}
